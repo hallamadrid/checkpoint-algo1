@@ -1,0 +1,23 @@
+ALGORITHM counter
+VAR
+phrase,caractere,voyelles : INTEGER;
+sent : CHAR;
+phrase:=0;caractere:=1;voyelles:=0;
+BEGIN
+Read(sent)
+WHILE (sent<>'.')DO
+IF (sent='') THEN
+phrase:=phrase+1;
+caractere:=caractere+1;
+else IF (sent in ['a','e','i','o','u']) THEN
+voyelles:=voyelles+1;
+caractere:=caractere+1;
+else
+phrase:=phrase+1;
+END_IF
+END_WHILE
+Write(phrase)
+Write(caractere)
+Write(voyelles)
+END
+
